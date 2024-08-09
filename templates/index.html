@@ -1,0 +1,136 @@
+{% include "navbar.html" %}
+    <div class="alert alert-success" role="alert">
+      Welcome to TextMaster
+      <a href="https://mustafapinjari.netlify.app/" class="alert-link"
+        >Developer</a
+      >.Protofolio.
+    </div>
+
+    <div class="container">
+
+    <form action="/analyzer" method="post" id="textForm">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label"
+          >Enter Your Text</label
+        >
+        <textarea
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          name ="text"
+          rows="10"
+        ></textarea>
+      </div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="selectAll" checked />
+        <label class="form-check-label" for="selectAll">Select All</label>
+      </div>
+
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          name="spaceremover"
+          role="switch"
+          id="flexSwitchCheckChecked1"
+          checked
+        />
+        <label class="form-check-label" for="flexSwitchCheckChecked1"
+          >Remove Space</label
+        >
+      </div>
+
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          name="countlength"
+          role="switch"
+          id="flexSwitchCheckChecked2"
+          checked
+        />
+        <label class="form-check-label" for="flexSwitchCheckChecked2"
+          >Count Length</label
+        >
+      </div>
+
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          name="uppercase"
+          role="switch"
+          id="flexSwitchCheckChecked3"
+          checked
+        />
+        <label class="form-check-label" for="flexSwitchCheckChecked3"
+          >Upper Case</label
+        >
+      </div>
+     
+
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          name="lowercase"
+          role="switch"
+          id="flexSwitchCheckChecked4"
+          checked
+        />
+        <label class="form-check-label" for="flexSwitchCheckChecked4"
+          >Lower Case</label
+        >
+      </div>
+ 
+
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          name="removepunctuation"
+          role="switch"
+          id="flexSwitchCheckChecked5"
+          checked
+        />
+        <label class="form-check-label" for="flexSwitchCheckChecked5"
+          >Remove Punctuation</label
+        >
+      </div>
+      
+
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          name="titlecase"
+          role="switch"
+          id="flexSwitchCheckChecked6"
+          checked
+        />
+        <label class="form-check-label" for="flexSwitchCheckChecked6"
+          >Title Case</label
+        >
+      </div>
+    
+
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          name="reverse"
+          role="switch"
+          id="flexSwitchCheckChecked7"
+          checked
+        />
+        <label class="form-check-label" for="flexSwitchCheckChecked7"
+          >Reverse String</label
+        >
+      </div>
+     
+      <button type="submit" class="btn btn-primary mt-4">Analyze</button>
+    </form>
+    </div>
+    <br><br>
+
+    {% include "footer.html" %}

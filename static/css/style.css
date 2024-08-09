@@ -1,0 +1,68 @@
+/* for about us */
+.cropped-img {
+  width: 300px;  /* Set the desired width */
+  height: 250px; /* Set the desired height */
+  object-fit: cover; /* Crop the image */
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Skills */
+
+/* Container for the skill items */
+.skills-content {
+  display: flex;
+  padding: 10px 0; /* Add some padding for better visual appearance */
+  margin: -20px; /* Adjust margin to remove horizontal scroll bar from parent */
+  overflow: scroll; /* Allow both horizontal and vertical scrolling */
+  scroll-snap-type: x mandatory; /* Enable snap scrolling */
+  -ms-overflow-style: none;  /* Hide scrollbar for Internet Explorer and Edge */
+  scrollbar-width: none;  /* Hide scrollbar for Firefox */
+}
+.about-section p {
+  color: black;
+}
+
+/* Hide scrollbar for WebKit browsers */
+.skills-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual skill item styles */
+.skill-item {
+  flex: 0 0 auto; /* Prevent flex items from shrinking or growing */
+  scroll-snap-align: start; /* Snap items to the start of the container */
+  margin-right: 16px; /* Space between items */
+  text-align: center; /* Center the text below the image */
+}
+
+/* Optional: Styling for skill item images */
+.skill-logo {
+  max-width: 100px; /* Adjust size of the logos */
+  height: auto;
+  display: block;
+  margin: 0 auto 8px; /* Center the image and add margin below */
+}
+
+/* Optional: Additional styling for better visual appearance */
+.skill-item span {
+  display: block;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Optional: Container with hidden scrollbars */
+.hide-scrollbar {
+  overflow: hidden; /* Hide scrollbars */
+  width: 1200px;  /* Specific width */
+  max-height: 400px; /* Add a max-height to demonstrate scrolling */
+}
+
+.hide-scrollbar .skills-content {
+  overflow: auto; /* Allows both horizontal and vertical scrolling */
+  padding-bottom: 17px; /* Maintain padding to avoid content cut-off */
+  padding-right: 17px; /* Maintain padding to avoid content cut-off */
+}
